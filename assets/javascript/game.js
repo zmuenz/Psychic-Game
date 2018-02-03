@@ -9,7 +9,7 @@ document.onkeyup = function (event) {
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
     userGuessesSoFar.push(userGuess);
 
-    function makeid() {
+    function randomLetterSelect() {
         var text = "";
         var possible = "abcdefghijklmnopqrstuvwxyz";
 
@@ -19,7 +19,7 @@ document.onkeyup = function (event) {
         return text;
     }
 
-    var computerGuess = makeid()
+    var computerGuess = randomLetterSelect()
 
     if (computerGuess === userGuess) {
         wins++;
